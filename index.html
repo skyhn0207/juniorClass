@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>kakaoTalk</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="kakao_talk_window">
+    <header>
+      <div class="command_system">
+        <button class="set_btn">
+          <img src="img/setting.PNG" alt="환경설정">
+        </button>  
+        <button class="hide_btn">
+          <img src="img/hide.PNG" alt="최소화">
+        </button>  
+        <button class="close_btn">
+          <img src="img/close.PNG" alt="닫기">
+        </button>  
+      </div>
+
+      <h1>
+        <img src="img/main-logo.PNG" alt="kakao_logo">
+      </h1>
+    </header>
+
+    <main>
+      <form action="">
+        <div class="input_window">
+          <input type="text" id="uid" placeholder="카카오계정 (이메일 또는 전화번호)" value="">
+          <input type="password" id="pwd" placeholder="비밀번호" value="">
+        </div>
+      </form>
+
+      <button id="login_btn" class="submit_btn" type="submit" disabled>로그인</button>
+
+      <div class="error_text" id="error"></div>
+      <span class="or_mark">또는</span>
+      <button class="qr_loginP_btn">QR코드 로그인</button>
+
+
+      <!-- QR login popup -->
+      <div class="popup">
+        <button class="pop_close_btn"></button>
+        <div class="pop_title">
+          <div class="pop-logo">
+            <img src="img/qrlog.PNG" alt="">
+            <h2 class="qr_state">
+              QR코드로 로그인할 수 있습니다.
+            </h2>
+            <!-- <h2>
+              인증 시간이 만료되었습니다.
+            </h2> -->
+            <p class="qr_text">카카오톡 앱 > 더보기 > 우측상단의 아이콘을 눌러 QR코드를 스캔하세요</p>
+            <!-- <p>QR코드를 갱신하고 다시 시도해주세요.</p> -->
+          </div>
+        </div>
+
+        <div class="pop_main">
+          <div class="qr">
+            <img src="img/qr.PNG" alt="">
+            <div class="util_area">
+              <span class="time">유효 시간</span><span class="interval">00:58</span>
+              <button class="refresh">
+                <img src="img/re.PNG" alt="">
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pop_footer">
+          <a class="help_qr" href="https://cs.kakao.com/helps?category=24&locale=ko&service=8&articleId=1073203911&device=15" target="_blank">QR코드로 로그인 방법</a>
+          <button class="go_back">처음으로 돌아가기</button>
+        </div>
+      </div>
+      <!-- //QR login popup -->
+
+      
+      <div class="auto_login_area">
+        <input type="checkbox" id="auto_login">
+        <label for="auto_login">
+          <span>자동로그인</span>
+          <button>
+            <img src="img/alert.PNG" alt="알림">
+          </button>
+        </label>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer_wrap">
+        <a href="https://accounts.kakao.com/weblogin/find_account_guide?continue=https%3A%2F%2Faccounts.kakao.com%2Fweblogin%2Faccount%2Finfo" class="user_find" target="_blank">
+          카카오계정 찾기
+        </a>
+        <a href="https://accounts.kakao.com/weblogin/find_password?continue=https%3A%2F%2Faccounts.kakao.com%2Fweblogin%2Faccount%2Finfo" class="reset_pw" target="_blank">
+          비밀번호 재설정
+        </a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
